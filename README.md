@@ -7,22 +7,11 @@ Create and run a Rocket.Chat bot in under two minutes.
 >
 > The `-develop` tag will also be removed from the package file.
 
-[hubot]: https://github.com/hubotio/hubot
-[hubot-rocketchat]: https://github.com/rocketchat/hubot-rocketchat
-[sdk]: https://github.com/rocketchat/Rocket.Chat.js.SDK
-[contributing]: https://rocket.chat/docs/contributing/developing/
-[issues]: https://github.com/RocketChat/hubot-rocketchat-boilerplate/issues
-[generator]: https://github.com/hubotio/generator-hubot
-[deployment]: https://hubot.github.com/docs/deploying/
-[dotenv]: https://www.npmjs.com/package/dotenv
-[newrepo]: https://help.github.com/articles/creating-a-new-repository/
-[env]: https://github.com/RocketChat/hubot-rocketchat#configuring-your-bot
-
 ## Quick Start
 
 ```
-git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate
-cd hubot-rocketchat-boilerplate
+git clone https://github.com/Warrior1119/hubot_welcome_members.git
+cd hubot_welcome_members
 npm install
 ```
 Create a _.env_ file with content:
@@ -33,6 +22,7 @@ export ROCKETCHAT_USER=mybotuser
 export ROCKETCHAT_PASSWORD=mypassword
 export ROCKETCHAT_ROOM=general
 export ROCKETCHAT_USESSL=true
+...
 ```
 
 Adjust the content to fit your server and user credentials. Make sure `myuser` has **BOT role** on the server, if you don't know what that means, ask your server administrator to set it up for you.
@@ -58,25 +48,6 @@ mybotuser rc version
 `< TBD:  insert sample run screenshot >`
 
 You can examine the source code of these two bots under the `/scripts` directory, where you can add your own bot scripts written in Javascript.
-
-## Stable Versions
-
-This demo uses [Hubot][hubot] v3 and [Rocketchat.Chat adapter][hubot-rocketchat]
-v2, using the new [Rocketchat Node.js SDK][[sdk] for Rocket.Chat instances
-0.60.0 onward.
-
-Versions of `hubot-rocketchat` prior to v2 are incompatible with Hubot v3
-
-Due to the v1 adapter's use of Coffeescript, extending classes in es6
-javascript is troublesome.
-
-This bot is written in es6 and intended to run on node v8+. To run a bot on
-older versions of node would require compiling with babel to use the full es6
-feature set.
-
-Older versions of the adaptor (v0.*) are also incompatible with more recent
-versions of Rocket.Chat (v0.35+). Please report an issue if you find specific 
-version mismatches and we'll update this document.
 
 ## More Details
 
@@ -140,8 +111,3 @@ When running locally, we've used [`dotenv`][dotenv] to load configs from the
 `./.env` file. That makes it easy for setting environment variables.
 
 Please see [adapter docs for source of truth on environment variables][env].
-
-## Contributions Welcome
-
-Please see [our documentation on contributing][contributing], then
-[visit the issues][issues] to share your needs or ideas.
